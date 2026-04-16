@@ -20,33 +20,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Google Fonts — non-blocking load -->
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Open+Sans:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
-<!-- Tailwind — deferred -->
-<script src="https://cdn.tailwindcss.com" defer></script>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  if (typeof tailwind !== 'undefined') {
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              dark: '#4E4E4E',
-              gray: '#B2B2B1',
-              cream: '#FBE9DB',
-              beige: '#C7BAA7',
-              warm: '#AC9B89',
-              gold: '#CFAA5C',
-            }
-          },
-          fontFamily: {
-            display: ['Playfair Display', 'Georgia', 'serif'],
-            body: ['Open Sans', 'system-ui', 'sans-serif'],
-          }
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        brand: {
+          dark: '#4E4E4E',
+          gray: '#B2B2B1',
+          cream: '#FBE9DB',
+          beige: '#C7BAA7',
+          warm: '#AC9B89',
+          gold: '#CFAA5C',
         }
+      },
+      fontFamily: {
+        display: ['Playfair Display', 'Georgia', 'serif'],
+        body: ['Open Sans', 'system-ui', 'sans-serif'],
       }
-    };
+    }
   }
-});
+}
 </script>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -303,7 +299,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="section-separator"></div>
 
 <!-- ==================== SEÇÃO 4 — TRANSFORMAÇÕES ==================== -->
-<section style="background-color: #FFF8F2;">
+<section style="background-color: #FBE9DB;">
   <div class="max-w-5xl mx-auto px-6 py-16 md:py-24">
     <h2 class="font-display text-3xl md:text-4xl font-bold text-center" style="color: #4E4E4E;">
       Transformações reais
@@ -485,7 +481,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="section-separator"></div>
 
 <!-- ==================== SEÇÃO 8 — PERGUNTAS FREQUENTES ==================== -->
-<section style="background-color: #FBE9DB;">
+<section style="background-color: #FFF8F2;">
   <div class="max-w-3xl mx-auto px-6 py-16 md:py-24">
     <p class="font-body text-xs uppercase tracking-[0.25em] text-center font-semibold" style="color: #CFAA5C;">
       Dúvidas Frequentes
