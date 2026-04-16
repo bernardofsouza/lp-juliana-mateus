@@ -12,31 +12,41 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-5DRFN7RC');</script>
 <!-- End Google Tag Manager -->
-<script src="https://cdn.tailwindcss.com"></script>
+<!-- Preload hero image -->
+<link rel="preload" href="img/prof2.webp" as="image" type="image/webp">
+<!-- Preconnect to font origins -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- Google Fonts — non-blocking load -->
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Open+Sans:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
+<!-- Tailwind — deferred -->
+<script src="https://cdn.tailwindcss.com" defer></script>
 <script>
-tailwind.config = {
-  theme: {
-    extend: {
-      colors: {
-        brand: {
-          dark: '#4E4E4E',
-          gray: '#B2B2B1',
-          cream: '#FBE9DB',
-          beige: '#C7BAA7',
-          warm: '#AC9B89',
-          gold: '#CFAA5C',
+document.addEventListener('DOMContentLoaded', function() {
+  if (typeof tailwind !== 'undefined') {
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#4E4E4E',
+              gray: '#B2B2B1',
+              cream: '#FBE9DB',
+              beige: '#C7BAA7',
+              warm: '#AC9B89',
+              gold: '#CFAA5C',
+            }
+          },
+          fontFamily: {
+            display: ['Playfair Display', 'Georgia', 'serif'],
+            body: ['Open Sans', 'system-ui', 'sans-serif'],
+          }
         }
-      },
-      fontFamily: {
-        display: ['Playfair Display', 'Georgia', 'serif'],
-        body: ['Open Sans', 'system-ui', 'sans-serif'],
       }
-    }
+    };
   }
-}
+});
 </script>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -113,7 +123,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16">
       <div class="w-full md:w-2/5 flex-shrink-0">
         <div class="relative rounded-xl overflow-hidden" style="box-shadow: 0 8px 30px rgba(78,78,78,0.12), 0 2px 8px rgba(78,78,78,0.06);">
-          <img src="img/prof1.webp" alt="Juliana Mateus em seu consultório" class="w-full h-auto object-cover" style="aspect-ratio: 3/4;">
+          <img src="img/prof1.webp" alt="Juliana Mateus em seu consultório" class="w-full h-auto object-cover" loading="lazy" style="aspect-ratio: 3/4;">
           <div class="absolute inset-0" style="background: linear-gradient(180deg, transparent 60%, rgba(78,78,78,0.15) 100%);"></div>
         </div>
       </div>
@@ -326,11 +336,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               <div class="relative rounded-xl overflow-hidden" style="box-shadow: 0 8px 30px rgba(78,78,78,0.15), 0 2px 8px rgba(78,78,78,0.08);">
                 <span class="absolute top-3 left-3 z-10 font-body text-xs uppercase tracking-widest font-semibold px-3 py-1 rounded-full" style="background: rgba(255,255,255,0.9); color: #CFAA5C;">Antes</span>
-                <img src="img/result3.webp" alt="Antes — Par 2" class="w-full object-cover" style="height: 400px;">
+                <img src="img/result3.webp" alt="Antes — Par 2" class="w-full object-cover" loading="lazy" style="height: 400px;">
               </div>
               <div class="relative rounded-xl overflow-hidden" style="box-shadow: 0 8px 30px rgba(78,78,78,0.15), 0 2px 8px rgba(78,78,78,0.08);">
                 <span class="absolute top-3 left-3 z-10 font-body text-xs uppercase tracking-widest font-semibold px-3 py-1 rounded-full" style="background: rgba(255,255,255,0.9); color: #CFAA5C;">Depois</span>
-                <img src="img/result4.webp" alt="Depois — Par 2" class="w-full object-cover" style="height: 400px; object-position: 70% 30%; transform: scale(1.5); transform-origin: 70% 30%;">
+                <img src="img/result4.webp" alt="Depois — Par 2" class="w-full object-cover" loading="lazy" style="height: 400px; object-position: 70% 30%; transform: scale(1.5); transform-origin: 70% 30%;">
               </div>
             </div>
           </div>
@@ -340,11 +350,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               <div class="relative rounded-xl overflow-hidden" style="box-shadow: 0 8px 30px rgba(78,78,78,0.15), 0 2px 8px rgba(78,78,78,0.08);">
                 <span class="absolute top-3 left-3 z-10 font-body text-xs uppercase tracking-widest font-semibold px-3 py-1 rounded-full" style="background: rgba(255,255,255,0.9); color: #CFAA5C;">Antes</span>
-                <img src="img/result5.webp" alt="Antes — Par 3" class="w-full object-cover" style="height: 400px;">
+                <img src="img/result5.webp" alt="Antes — Par 3" class="w-full object-cover" loading="lazy" style="height: 400px;">
               </div>
               <div class="relative rounded-xl overflow-hidden" style="box-shadow: 0 8px 30px rgba(78,78,78,0.15), 0 2px 8px rgba(78,78,78,0.08);">
                 <span class="absolute top-3 left-3 z-10 font-body text-xs uppercase tracking-widest font-semibold px-3 py-1 rounded-full" style="background: rgba(255,255,255,0.9); color: #CFAA5C;">Depois</span>
-                <img src="img/result6.webp" alt="Depois — Par 3" class="w-full object-cover" style="height: 400px;">
+                <img src="img/result6.webp" alt="Depois — Par 3" class="w-full object-cover" loading="lazy" style="height: 400px;">
               </div>
             </div>
           </div>
@@ -354,11 +364,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               <div class="relative rounded-xl overflow-hidden" style="box-shadow: 0 8px 30px rgba(78,78,78,0.15), 0 2px 8px rgba(78,78,78,0.08);">
                 <span class="absolute top-3 left-3 z-10 font-body text-xs uppercase tracking-widest font-semibold px-3 py-1 rounded-full" style="background: rgba(255,255,255,0.9); color: #CFAA5C;">Antes</span>
-                <img src="img/result7.webp" alt="Antes — Par 4" class="w-full object-cover" style="height: 400px;">
+                <img src="img/result7.webp" alt="Antes — Par 4" class="w-full object-cover" loading="lazy" style="height: 400px;">
               </div>
               <div class="relative rounded-xl overflow-hidden" style="box-shadow: 0 8px 30px rgba(78,78,78,0.15), 0 2px 8px rgba(78,78,78,0.08);">
                 <span class="absolute top-3 left-3 z-10 font-body text-xs uppercase tracking-widest font-semibold px-3 py-1 rounded-full" style="background: rgba(255,255,255,0.9); color: #CFAA5C;">Depois</span>
-                <img src="img/result8.webp" alt="Depois — Par 4" class="w-full object-cover" style="height: 400px;">
+                <img src="img/result8.webp" alt="Depois — Par 4" class="w-full object-cover" loading="lazy" style="height: 400px;">
               </div>
             </div>
           </div>
